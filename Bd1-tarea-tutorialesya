@@ -1,0 +1,333 @@
+3)drop table if exists agenda;
+create table agenda(
+   nombre varchar(20),
+   domicilio varchar(30),
+   telefono varchar(11)
+);
+create table agenda(
+   nombre varchar(20),
+   domicilio varchar(30),
+   telefono varchar(11)
+);
+show tables;
+describe agenda;
+drop table, if exists;
+drop table agenda;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+4) drop table if existes agenda;
+create table agenda(
+nombre varchar(20),
+domicilio varchar(30),
+telefono varchar(11));
+show tables;
+describe agenda;
+insert into agenda (nombre, domicilio, telefono) values 
+  ('Alberto Mores','Colon 123','4234567');
+insert into agenda (nombre, domicilio, telefono) values 
+  ('Juan Torres','Avellaneda 135','4458787');
+select nombre, domicilio, telefono from agenda;
+drop table if exists agenda:
+drop table agenda;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+5)drop table if exists peliculas;
+create table peliculas(
+  nombre varchar(20),
+  actor varchar(20),
+  duracion integer,
+  cantidad integer
+ );
+describe peliculas;
+ insert into peliculas (nombre, actor, duracion, cantidad)
+  values ('Mision imposible','Tom Cruise',120,3);
+ insert into peliculas (nombre, actor, duracion, cantidad)
+  values ('Mision imposible 2','Tom Cruise',180,2);
+ insert into peliculas (nombre, actor, duracion, cantidad)
+  values ('Mujer bonita','Julia R.',90,3);
+ insert into peliculas (nombre, actor, duracion, cantidad)
+  values ('Elsa y Fred','China Zorrilla',90,2);
+select * from peliculas;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+6)drop table if exists peliculas;
+create table peliculas(
+  titulo varchar(20),
+  actor varchar(20),
+  duracion integer,
+  cantidad integer
+ );
+ describe peliculas;
+ insert into peliculas (titulo, actor, duracion, cantidad)
+  values ('Mision imposible','Tom Cruise',120,3);
+ insert into peliculas (titulo, actor, duracion, cantidad)
+  values ('Mision imposible 2','Tom Cruise',180,2);
+ insert into peliculas (titulo, actor, duracion, cantidad)
+  values ('Mujer bonita','Julia R.',90,3);
+ insert into peliculas (titulo, actor, duracion, cantidad)
+  values ('Elsa y Fred','China Zorrilla',90,2)
+select titulo,actor from peliculas;
+select titulo,duracion from peliculas;
+select titulo,cantidad from peliculas;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+7)drop table if exists agenda;
+create table agenda(
+nombre varchar (20),
+domicilio varchar (30),
+telefono varchar (11));
+describe agenda;
+insert into agenda(nombre,domicilio,telefono) values('Alberto Mores','colon123','4234567');
+insert into agenda(nombre,domicilio,telefono) values('Juan Torres','Avellaneda 135','4458787');
+insert into agenda(nombre,domicilio,telefono) values ( 'Mariana Lopez','Urquiza 333','4545454');
+insert into agenda(nombre,domicilio,telefono) values( 'Fernando Lopez','Urquiza 333','4545454');
+select * from agenda;
+select nombre from agenda where nombre= 'Juan Torres';
+select domicilio from agenda where domicilio= 'colon123';
+select telefono from agenda where telefono= '4545454'
+drop table agenda;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+8) drop table if exists articulos;
+ create table articulos(
+  codigo integer,
+  nombre varchar(20),
+  descripcion varchar(30),
+  precio float,
+  cantidad integer
+ );
+describe articulos;
+ insert into articulos (codigo, nombre, descripcion, precio,cantidad)
+  values (1,'impresora','Epson Stylus C45',400.80,20);
+ insert into articulos (codigo, nombre, descripcion, precio,cantidad)
+  values (2,'impresora','Epson Stylus C85',500,30);
+ insert into articulos (codigo, nombre, descripcion, precio,cantidad)
+  values (3,'monitor','Samsung 14',800,10);
+ insert into articulos (codigo, nombre, descripcion, precio,cantidad)
+  values (4,'teclado','ingles Biswal',100,50);
+ insert into articulos (codigo, nombre, descripcion, precio,cantidad)
+  values (5,'teclado','español Biswal',90,50);
+select * from articulos;
+select * from arcticulos where nombre='impresora';
+select * from articulos
+   where precio>=500;
+select nombre,descripcion, precio,cantidad from articulos where cantidad<30;
+select nombre, descripcion from articulos where precio<>100;
+////////////////////////////////////////////////////
+9)drop table if exists agenda;
+create table agenda(
+  apellido varchar(30),
+  nombre varchar(20),
+  domicilio varchar(30),
+  telefono varchar(11)
+ );
+describe agenda;
+insert into agenda(apellido,nombre,domicilio,telefono) values('Mores','Alberto','Colon 123','4234567');
+insert into agenda(apellido,nombre,domicilio,telefono) values('Torres','Juan','Avellaneda 135','4458787');
+insert into agenda(apellido,nombre,domicilio,telefono) values(' Lopez','Mariana','Urquiza 333','4545454');
+insert into agenda(apellido,nombre,domicilio,telefono) values('Lopez','Jose','Urquiza 333','4545454');
+insert into agenda(apellido,nombre,domicilio,telefono) values('Peralta','Susana','Gral. Paz 1234','4123456');
+
+delete from agenda where nombre='Juan';
+delete from agenda where telefono='4545454';
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+10) drop table if exists agenda;
+ create table agenda(
+  apellido varchar(30),
+  nombre varchar(20),
+  domicilio varchar(30),
+  telefono varchar(11)
+ );
+describe agenda;
+insert into agenda(apellido,nombre,domicilio,telefono) values('Mores','Alberto','Colon 123','4234567');
+insert into agenda(apellido,nombre,domicilio,telefono) values('Torres','Juan','Avellaneda 135','4458787');
+insert into agenda(apellido,nombre,domicilio,telefono) values(' Lopez','Mariana','Urquiza 333','4545454');
+insert into agenda(apellido,nombre,domicilio,telefono) values('Lopez','Jose','Urquiza 333','4545454');
+insert into agenda(apellido,nombre,domicilio,telefono) values('Peralta','Susana','Gral. Paz 1234','4123456');
+update agenda set nombre='Juan Jose' where nombre='Juan';
+update agenda set telefono='4445566' where telefono='4545454';
+update agenda set nombre='Juan Jose' where nombre='Juan';
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+11) drop table if exists libros;
+create table libros(
+  codigo integer,
+  titulo varchar(20),
+  autor varchar(30),
+  editorial varchar(15),
+  primary key(codigo)
+ );
+describe libros;
+insert into libros( codigo,titulo,autor,editorial) values( 1,'El aleph','Borges','Planeta');
+insert into libros( codigo,titulo,autor,editorial) values( 2,'Martin Fierro','Jose Hernandez','Emece');
+insert into libros( codigo,titulo,autor,editorial) values( 3,'Aprenda PHP','Mario Molina','Emece');
+insert into libros( codigo,titulo,autor,editorial) values(4,'Cervantes y el quijote','Borges','Paidos');
+insert into libros( codigo,titulo,autor,editorial) values( 5,'Matematica estas ahi', 'Paenza',' Paidos');
+select * from libros;
+insert into libros( codigo,autor) values(6,'Borges');
+insert into libros(codigo,titulo,editorial) values(7,'Martin Fierro','Emece');
+insert into libros(codigo) values(2);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+12) drop table if exists medicamentos;
+create table medicamentos(
+  codigo integer auto_increment,
+  nombre varchar(20),
+  laboratorio varchar(20),
+  precio float,
+  cantidad integer,
+  primary key (codigo)
+);
+describe medicamentos;
+
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values('Sertal','Roche',5.2,100);
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values('Buscapina','Roche',4.10,200);
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values('Amoxidal 500','Bayer',15.60,100);
+
+select codigo,nombre,laboratorio,precio,cantidad from medicamentos;
+
+insert into medicamentos (codigo,nombre, laboratorio,precio,cantidad)
+values(1'cetamol 1000','scavone',10.12,1000);
+
+insert into medicamentos (codigo,nombre, laboratorio,precio,cantidad)
+values(12,'Paracetamol 500','Bago',1.90,200);
+
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values('Bayaspirina','Bayer',2.10,150);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+13) drop table if exists  medicamentos;
+create table medicamentos(
+  codigo integer auto_increment,
+  nombre varchar(20),
+  laboratorio varchar(20),
+  precio float,
+  cantidad integer,
+  primary key (codigo)
+ );
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+   values('Sertal','Roche',5.2,100);
+ insert into medicamentos (nombre, laboratorio,precio,cantidad)
+  values('Buscapina','Roche',4.10,200);
+ insert into medicamentos (nombre, laboratorio,precio,cantidad)
+  values('Amoxidal 500','Bayer',15.60,100);
+ delete from medicamentos;
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values('Sertal','Roche',5.2,100);
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values('Amoxidal 500','Bayer',15.60,100);
+select * from medicamentos;
+truncate table medicamentos;
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values('Buscapina','Roche',4.10,200);
+describe medicamentos;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+14) drop table if exists medicamentos;
+ create table medicamentos(
+  codigo integer auto_increment,
+  nombre varchar(20) not null,
+  laboratorio varchar(20),
+  precio float,
+  cantidad integer not null,
+  primary key (codigo)
+ );
+describe medicamentos;
+ insert into medicamentos (nombre,laboratorio,precio,cantidad)
+  values('Sertal gotas','Roche',5.2,100); 
+ insert into medicamentos (nombre,laboratorio,precio,cantidad)
+  values('Sertal compuesto','Roche',7.1,150);
+ insert into medicamentos (nombre,laboratorio,precio,cantidad)
+  values('Buscapina','Roche',null,200);
+ insert into medicamentos (nombre,laboratorio,precio,cantidad)
+  values('Amoxidal 500','Bayer',15.60,0);
+ insert into medicamentos (nombre,laboratorio,precio,cantidad)
+  values('Amoxidal jarabe','Bayer',25,120);
+ insert into medicamentos (nombre,laboratorio,precio,cantidad)
+  values('Amoxinil',null,25,120);
+ insert into medicamentos (nombre, laboratorio,precio,cantidad)
+  values('Bayaspirina','',0,150); .
+select codigo from medicamentos;
+select * from medicamentos where laboratorio is null;
+select * from medicamentos where laboratorio=";
+
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values(null,'Bayer',10.20,100); 
+insert into medicamentos (nombre, laboratorio,precio,cantidad)
+values('Benadryl comprimidos','Bayer',10.20,null);
+insert into medicamentos (codigo,nombre, laboratorio,precio,cantidad)
+values(null,'Benadryl comprimidos','Bayer',10.20,null);
+
+select * from medicamentos where precio<>0;
+select * from medicamentos where precio is not null;
+select * from medicamentos where laboratorio<>'';
+select * from medicamentos where laboratorio is not null;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+15) drop table if exists peliculas;
+ create table peliculas(
+  codigo integer unsigned auto_increment,
+  titulo varchar(40) not null,
+  actor varchar(20),
+  duracion integer unsigned,
+  primary key(codigo)
+ );
+describe peliculas;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+17) drop table if exists autos;
+ create table autos(
+  patente char(6),
+  marca varchar(20),
+  modelo char(4),
+  precio float unsigned,
+  primary key(patente)
+ );
+ insert into autos (patente,marca,modelo,precio)
+  values('ACD123','Fiat 128','1970',15000);
+ insert into autos (patente,marca,modelo,precio)
+  values('ACG234','Renault 11','1990',40000);
+ insert into autos (patente,marca,modelo,precio)
+  values('BCD333','Peugeot 505','1990',80000);
+ insert into autos (patente,marca,modelo,precio)
+  values('GCD123','Renault Clio','1990',70000);
+ insert into autos (patente,marca,modelo,precio)
+  values('BCC333','Renault Megane','1998',95000);
+ insert into autos (patente,marca,modelo,precio)
+  values('BVF543','Fiat 128','1975',20000);
+select * from autos where modelo='1990';
+select * from autos where precio>50000;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+18) drop table if exists pedidos;
+create table pedidos(
+Npedido integer unsigned auto_increment,
+nombre varchar (20),
+tipo varchar (20),
+precio float(2,2) unsigned,
+cantidad integer(199) unsigned,
+domicilio varchar(30));
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+19) drop table if exists autos;
+create table autos(
+  marca varchar(15),
+  modelo year,
+  dueño varchar(30),
+  precio decimal (8,2) unsigned  
+ );
+insert into autos(marca,modelo,dueño,precio) values('Fiat 128','1970','Juan Lopez',50000);
+insert into autos(marca,modelo,dueño,precio) values('Renault 11','1990','Juan Lopez',80000);
+insert into autos(marca,modelo,dueño,precio) values('Fiat 128','1971','Ana Ferreyra',51000);
+insert into autos(marca,modelo,dueño,precio) values('Peugeot 505','1998','Luis Luque',99000);
+insert into autos(marca,modelo,dueño,precio) values('Peugeot 505','1997','Carola Perez',85000);
+select * from autos where modelo<1995;
+select marca,modelos from autos where <>1970;
+insert into autos(marca,modelo,dueño,precio) values('Peugeot 505',1995,'Carlos Lopez',88000);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+20)drop table if exists peliculas;
+create table peliculas(
+codigo integer unsigned auto_increment,
+titulo varchar (30) not null,
+actor varchar (20),
+duracion integer unsigned(200) auto_increment,
+primary key(codigo));
+ insert into peliculas (titulo,actor,duracion)
+  values('Mision imposible','Tom Cruise',120);
+ insert into peliculas (codigo,duracion)
+  values(5,90);
+ insert into peliculas (titulo,actor)
+  ('Harry Potter y la piedra filosofal','Daniel R.');
+ insert into peliculas (titulo,actor,duracion)
+  ('Harry Potter y la piedra filosofal','Daniel R.',120);
+describe peliculas;
