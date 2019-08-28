@@ -1,0 +1,24 @@
+Ejercicio 96////////////////////////////////////////////////////////// 
+drop table if exists alumnos;
+create table alumnos(
+  documento char(8),
+  nombre varchar(30),
+  nota decimal(4,2),
+  primary key(documento)
+ );
+ insert into alumnos values('30111111','Ana Algarbe',5.1);
+ insert into alumnos values('30222222','Bernardo Bustamante',3.2);
+ insert into alumnos values('30333333','Carolina Conte',4.5);
+ insert into alumnos values('30444444','Diana Dominguez',9.7);
+ insert into alumnos values('30555555','Fabian Fuentes',8.5);
+ insert into alumnos values('30666666','Gaston Gonzalez',9.70);
+drop view if exists vista_nota_alumnos;
+create view vista_nota_alumnos as
+   select nombre, nota
+     from alumnos;
+select * from vista_nota_alumnos;  
+ create view vista_nota_alumnos_aprobados as
+   select nombre, nota 
+     from alumnos
+     where nota>=7;
+select * from vista_nota_alumnos_aprobados;
